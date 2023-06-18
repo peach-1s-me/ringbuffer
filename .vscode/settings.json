@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.md": "markdown",
+        "cat_error.h": "c",
+        "catos_config.h": "c"
+    }
+}
