@@ -21,7 +21,6 @@
 
 #define MIN_RINGBUFFER_SIZE     4
 
-#if 1
 typedef struct _ringbuffer_t ringbuffer_t;
 struct _ringbuffer_t
 {
@@ -84,37 +83,5 @@ cat_int32_t ringbuffer_put_more(ringbuffer_t *p_ringbuffer, const cat_uint8_t *p
  * @return cat_uint32_t     从环形缓冲区实际取出的数据个数(目前每个数据单位为字节)
  */
 cat_uint32_t ringbuffer_get_more(ringbuffer_t *p_ringbuffer, cat_uint8_t *p_data, cat_uint32_t size);
-#else
-typedef struct _ringbuffer_t ringbuffer_t;
-struct _ringbuffer_t
-{
-    void            *p_buffer;
-    cat_uint32_t     total_size;
-    cat_uint32_t     item_size;
-};
-
-/**
- * @brief 初始化循环缓冲区
- * 
- * @param  buffer_start_addr 起始地址
- * @param  buffer_total_size 缓冲区总容量(字节)
- * @param  buffer_item_size  存取的元素大小(字节)
- */
-void ringbuffer_init(
-    void *buffer_start_addr,
-    cat_uint32_t buffer_total_size,
-    cat_uint32_t buffer_item_size);
-
-/**
- * @brief 往缓冲区放元素
- * 
- * @param  p_ringbuffer     环形缓冲区指针
- * @param  p_to_put         待存入的数据
- * @param  num              要存入的数量
- * @return * n 
- */
-cat_int32_t ringbuffer_put(ringbuffer_t *p_ringbuffer, void *p_to_put, cat_uint32_t num);
-cat_int32_t ringbuffer_get(ringbuffer_t *p_ringbuffer, void *p_to_put, cat_uint32_t num);
-#endif
 
 #endif /* #ifndef RINGBUFFER_H */
