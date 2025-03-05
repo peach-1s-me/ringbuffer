@@ -1,5 +1,5 @@
 /**
- * @file ringbuffer.c
+ * @file cat_ringbuffer.c
  * @author 文佳源 (648137125@qq.com)
  * @brief 环形缓冲区源文件
  * @version 0.1
@@ -16,7 +16,7 @@
 #include <stdio.h>
 #include "cat_error.h"
 
-#include "ringbuffer.h"
+#include "cat_ringbuffer.h"
 
 #define CAT_SYS_PRINTF(_fmt, ...) \
         printf((const char *)_fmt, ##__VA_ARGS__)

@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "ringbuffer.h"
+#include "cat_ringbuffer.h"
 
 #define BUFF_SPACE_SIZE  16
 

@@ -1,5 +1,5 @@
 /**
- * @file ringbuffer.h
+ * @file cat_ringbuffer.h
  * @author 文佳源 (648137125@qq.com)
  * @brief 环形缓冲区头文件
  * @version 0.1
@@ -13,8 +13,8 @@
  * <tr><td>v1.0 <td>文佳源 <td>2023-06-17 <td>新建文件
  * </table>
  */
-#ifndef RINGBUFFER_H
-#define RINGBUFFER_H
+#ifndef CAT_RINGBUFFER_H
+#define CAT_RINGBUFFER_H
 
 #include "catos_config.h"
 #include "catos_types.h"
